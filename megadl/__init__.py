@@ -15,7 +15,6 @@ print("Mega.nz Bot - Cypher is starting...")
 if sys.platform != "win32":
     try:
         import uvloop
-        uvloop.install()
         print("> Using uvloop for better performance")
     except ImportError:
         pass
