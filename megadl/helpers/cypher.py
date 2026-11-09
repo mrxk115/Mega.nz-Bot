@@ -71,13 +71,13 @@ class MeganzClient(Client):
         # Initializing pyrogram
         print("> Initializing client")
         super().__init__(
-            "MegaBotCypher",
-            bot_token=os.getenv("BOT_TOKEN"),
-            api_id=os.getenv("APP_ID"),
-            api_hash=os.getenv("API_HASH"),
-            plugins=dict(root="megadl/modules"),
-            sleep_threshold=10,
-        )
+    "MegaBotCypher",
+    bot_token=os.getenv("BOT_TOKEN"),
+    api_id=int(os.getenv("API_ID")),
+    api_hash=os.getenv("API_HASH"),
+    plugins=dict(root="megadl/modules"),
+    sleep_threshold=10,
+)
 
         # Initializing mongodb
         print("> Initializing database")
